@@ -1,0 +1,425 @@
+/*
+* reset.css
+* Reset browser defaults, set up font sizing, basic colors, and basic element styles.
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0b2 | 201101
+   NOTE: THIS IS A BETA VERSION (see previous line)
+   USE WITH CAUTION AND TEST WITH ABANDON */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*
+Copyright (c) 2010, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.8.1
+*/
+body{font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small;}select,input,button,textarea,button{font:99% arial,helvetica,clean,sans-serif;}table{font-size:inherit;font:100%;}pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%;}
+
+/* END RESET */
+
+body {
+	background-color: #000;
+}
+
+article {
+  height: 400px;
+  left: 0%;
+	margin: 0;
+	position: absolute;
+	top: 0%;
+	width: 800px;
+}
+
+.snow { background: #555; border: 1px solid #fff; position: absolute; }
+
+.steam { position: absolute; background: #fff; }
+
+#bg {
+  background: url(../images/logo.png) top center no-repeat;
+	display: block;
+	height: 100%;
+	position: relative;
+	width: 100%;
+	z-index:  0;
+}
+
+#viewport {
+	display: block;
+	margin: 0px auto;
+	position: relative;
+	width: 1000px;
+}
+
+section#book {
+  height: 900px;
+  left: 9%;
+	position: relative;
+	top: 50px; 
+	width: 800px;
+	-webkit-transform-style: preserve-3d;
+	-webkit-animation-name: spinBook;
+	-webkit-animation-duration: 6s;
+	-webkit-animation-iteration-count: 1;
+}
+	
+#frontcover,
+#bottom{
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: -webkit-transform 1s linear;
+	-webkit-transition-delay: 0.2s;
+	-webkit-transform: translate3d(0px, 200px, 0px) rotate3d(1, 0, 0, -90deg);
+	backface-visibility: hidden;
+}
+
+
+#frontcover{
+	background-color: rgba(255, 0, 255, 1);
+	background: url(../images/cover.png) top left no-repeat;
+	-webkit-transform-origin: 0px 0px 0px;
+	-webkit-transform: translate3d(0px, 400px, -200px) rotateX(90deg);
+}
+
+
+#viewport.active #frontcover{
+	-webkit-transition: -webkit-transform 1s linear;
+	-webkit-transform: translate3d(0px, 400px, -200px) rotateX(180deg);
+}
+
+#spine{
+	width: 800px;
+	height: 80px;
+	background: url(../images/spine.png) top left no-repeat;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translate3d(0px, 400px, -200px) rotate3d(1, 0, 0, 180deg);
+}
+
+#leftedge,
+#rightedge{
+  background: url(../images/sidePages.jpg) top left no-repeat;
+  height: 80px;
+	width: 400px;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translate3d(0px, 400px, 200px);
+}
+
+#frontedge {
+	background: url(../images/frontPages.jpg) top left no-repeat;
+	height: 80px;
+	width: 800px;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translate3d(0px, 400px, 200px);
+}
+
+#leftedge{
+	-webkit-transform: translate3d(-200px, 400px, 0px) rotate3d(0, 1, 0, -90deg);
+}
+
+#rightedge{
+	-webkit-transform: translate3d(600px, 400px, 0px) rotate3d(0, 1, 0, 90deg);
+}
+
+#backcover{
+  background: url(../images/backCover.png) top left no-repeat;
+  height: 400px;
+	width: 800px;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translate3d(0px, 280px, 0px) rotate3d(1, 0, 0, 270deg);
+}
+
+#bottom{
+  background: url(../images/bottom.jpg) top left no-repeat;
+	visibility: hidden;
+	-webkit-transition: visibility 1.2s linear;
+	-webkit-backface-visibility: visible;
+}
+
+#background {
+  background: url(../images/city.jpg) top left no-repeat;
+  -webkit-backface-visibility: hidden;
+	-webkit-transition: -webkit-transform 1s linear;
+	-webkit-transition-delay: 0.2s;
+	-webkit-transform-origin: 0px 400px 0px;
+	-webkit-transform: translate3d(0px, 0px, -200px) rotateX(-90deg);
+}
+	
+#cloudfield{
+  background: url(../images/clouds.png) top left repeat-x;
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: -webkit-transform 1s linear;
+	-webkit-transition-delay: 0.2s;
+	-webkit-transform-origin: 0px 400px 0px;
+	-webkit-transform: translate3d(0px, 0px, -200px) rotateX(-90deg);
+}
+
+#snowfield,
+#video,
+#midTier,
+#frontTier{
+	overflow: hidden;
+	position: absolute;
+	visibility:hidden;
+	z-index: 10;
+	-webkit-transition: -webkit-transform 1s linear, visibility 1s linear;
+	-webkit-transform-origin: 0px 400px 0px;
+}
+
+#snowfield {
+  background-color: transparent;
+	-webkit-transform: translateZ(-110px) rotateX(-90deg);
+}
+
+#video {
+  background-color: transparent;
+	-webkit-transform: translateZ(-210px) rotateX(-90deg);
+}
+
+#midTier{
+  background: url(../images/tracks.png) top left no-repeat;
+}
+
+#frontTier{
+  background: url(../images/tracks.png) top left no-repeat;
+}
+
+#viewport.active #cloudfield{
+	-webkit-transition: -webkit-transform 1s linear;
+	-webkit-animation-name: cloudAnimation;
+	-webkit-transform: translate3d(0px, 0px, -200px) rotate3d(1, 0, 0, 0deg);
+	-webkit-animation-duration: 60s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+
+#viewport.active #background{
+	-webkit-transition: -webkit-transform 1s linear;
+	-webkit-transform: translate3d(0px, 0px, -200px) rotate3d(1, 0, 0, 0deg);
+	-webkit-animation-duration: 60s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+
+#viewport.active #snowfield,
+#viewport.active #video,
+#viewport.active #midTier,
+#viewport.active #frontTier,
+#viewport.active #bottom {
+	visibility: visible;
+}
+
+#viewport.active #snowfield {
+	-webkit-transform: translateZ(-130px);
+}
+
+#viewport.active #video {
+	-webkit-transform: translateZ(-60px);
+}
+
+#viewport.active #midTier{
+	-webkit-transform: translateZ(40px);
+}
+
+#viewport.active #frontTier{
+	-webkit-transform: translateZ(120px);
+}
+
+#midTrain, #frontTrain{
+	bottom: 55px;
+	height: 48px;
+	left:0px;
+	position: absolute;
+	width: 204px;
+	-webkit-transform-origin: 0px 500px;
+	-webkit-transform: translateY(100px);
+}
+
+#viewport.active #midTrain{
+	visibility: visible;
+	-webkit-animation-name: animateTrain1;
+	-webkit-animation-duration: 12s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+
+#viewport.active #frontTrain{
+	visibility: visible;
+	-webkit-animation-name: animateTrain2;
+	-webkit-animation-duration: 15s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+
+#trainbody{
+  background: url(../images/train.png) left top no-repeat;
+  height: 48px;
+  left:0px;
+	position: absolute;
+	top: 0px;
+	width: 204px;
+	z-index: 10;
+}
+
+#viewport.active #trainbody{
+	-webkit-animation-name: trainbodyAnimation;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+
+#viewport.active #frontTrain #trainbody{
+	-webkit-animation-name: trainbodyAnimation2;
+	-webkit-animation-duration: 2.5s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+
+/* ------ ANIMATIONS ------ */
+@-webkit-keyframes spinBook {
+	from {
+		top: -250px;
+		-webkit-transform: rotateX(-7deg) rotateY(180deg) rotateZ(180deg);
+		animation-timing-function: ease-out;
+	}
+	20%{
+		top: -250px;
+		-webkit-transform: rotateX(-7deg) rotateY(180deg) rotateZ(180deg);
+		animation-timing-function: ease-in;
+	}
+	80%{
+		top: 50px;
+		-webkit-transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
+		animation-timing-function: ease-out;
+	}
+	to{
+		top: 50px;
+		-webkit-transform: rotateX(-29deg) rotateY(0deg) rotateZ(0deg);
+		animation-timing-function: ease-in;
+	}
+}
+
+@-webkit-keyframes cloudAnimation {
+	from {
+		background-position: left 30px;
+	}
+	to{
+		background-position: 580px 30px;
+	}
+}
+
+@-moz-keyframes cloudAnimation {
+	from {
+		background-position: left 30px;
+	}
+	to{
+		background-position: 580px 30px;
+	}
+}
+
+@-webkit-keyframes trainbodyAnimation {
+	from {
+		-webkit-transform: matrix3d(1, 0, 0, 0,
+                             -0.3, 1, 0, 0, 
+                             0, 0, 1, 0, 
+                             0, 0, 0, 1);
+	}
+	50%{
+		-webkit-transform: matrix3d(1, 0, 0, 0, 
+                             0.3, 1, 0, 0, 
+                             0, 0, 1, 0, 
+                             0, 0, 0, 1);
+	}
+	to {
+		-webkit-transform: matrix3d(1, 0, 0, 0, 
+                             -0.3, 1, 0, 0, 
+                             0, 0, 1, 0, 
+                             0, 0, 0, 1);
+	}
+}
+
+@-webkit-keyframes trainbodyAnimation2 {
+	from {
+		-webkit-transform: matrix3d(1, 0, 0, 0,
+                             0, 1, 0, 0, 
+                             0, 0, 1, 0, 
+                             0, 0, 0, 1);
+	}
+	50%{
+		-webkit-transform: matrix3d(1, 0, 0, 0, 
+                             -0.3, 1, 0, 0, 
+                             0, 0, 1, 0, 
+                             0, 0, 0, 1);
+	}
+	to {
+		-webkit-transform: matrix3d(1, 0, 0, 0, 
+                             0, 1, 0, 0, 
+                             0, 0, 1, 0, 
+                             0, 0, 0, 1);
+	}
+}
+
+@-webkit-keyframes animateTrain1 {
+	from {
+		-webkit-transform: translateX(850px);
+	}
+	40%{
+		-webkit-transform: translateX(-250px);
+	}
+	to{
+		-webkit-transform: translateX(-250px);
+	}
+}
+
+@-webkit-keyframes animateTrain2 {
+	from {
+		-webkit-transform: scaleX(-1) translateX(20px);
+	}
+	99%{
+		-webkit-transform: scaleX(-1) translateX(-1050px);
+	}
+	to{
+		-webkit-transform: scaleX(-1) translateX(-1050px);
+	}
+}
