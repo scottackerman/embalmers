@@ -22,7 +22,6 @@ var numberOfFlakes = 250,
 
 // FIND THE FLAKING MEMORY LEAK!!!!!
 
-
 $(document).ready(function() {
   Modernizr.load('js/traqball.js');
 	setTimeout('init()', 5500);
