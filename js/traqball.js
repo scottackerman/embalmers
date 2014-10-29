@@ -377,5 +377,6 @@
 	}
 	window.Traqball = Traqball;
 })();
+
 // SETUP / CONFIG!
 var myTraqball = new Traqball({target: "viewport", axis:[-1,0,0], angle: .5, perspective: "1900px"});
