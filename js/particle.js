@@ -146,11 +146,4 @@ function tweenSteam(steam, steamTweenTime, target) {
 	xTween.start();
 	yTween.start();
 	
-	/*
-	var leftStr = flakeFinishX + 'px';
-  var topStr = liquidSurfaceY + 'px';
-  $(flake).animate({top: topStr, left: flakeFinishX}, flakeTweenTime*1000, function() {
-      setFlakeParams(flake);
-  });
-  */
 }
