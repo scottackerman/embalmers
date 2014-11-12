@@ -100,7 +100,6 @@
 			w	= stage.offsetWidth/2;
 			//take the shortest of both values as radius
 			radius = h<w ? h : w;
-		
 			//We parse viewport. The first block-element we find will be our "victim" and made rotatable
 			for(var i=0; i<stage.childNodes.length; i++){
 				var child = stage.childNodes[i];
@@ -119,7 +118,6 @@
 				var style = document.defaultView.getComputedStyle(target, "");
 				return style.getPropertyValue(prop);
 			}
-			
 			//Let's set the start values. If "conf" contains angle or perspective or vector, use them.
 			//If not, look for css3d transforms in the CSS.
 			//If this fails, let's create some default values.
@@ -156,7 +154,6 @@
 				angle = 0;
 				startMatrix = calcMatrix(axis, angle);
 			}
-		
 			if(THIS.config.perspective){
 				stage.style[styleObj+"Perspective"] = THIS.config.perspective;
 			}else if(perspective === "none"){
