@@ -94,12 +94,10 @@
 			pos 	= findPos(stage);
 			angle 	= THIS.config.angle || 0;
 			impulse	= THIS.config.impulse || true;
-		
 			// Let's calculate some basic values from "stage" that are necessary for our virtual trackball
 			// 1st: determine the radius of our virtual trackball:
 			h	= stage.offsetHeight/2,
 			w	= stage.offsetWidth/2;
-		
 			//take the shortest of both values as radius
 			radius = h<w ? h : w;
 		
