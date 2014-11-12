@@ -145,5 +145,4 @@ function tweenSteam(steam, steamTweenTime, target) {
 	xTween.addListener(st);
 	xTween.start();
 	yTween.start();
-	
 }
